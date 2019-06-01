@@ -22,6 +22,7 @@ class _HomeScreen extends StatelessWidget {
       backgroundColor: Colors.amber,
       appBar: AppBar(
         title: Text("Organo"),
+        centerTitle: true,
         backgroundColor: appColor,
       ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
