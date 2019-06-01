@@ -27,8 +27,23 @@ class _HomeScreen extends StatelessWidget {
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
         floatingActionButton: FloatingActionButton(
-          child: Text("2"),
-          backgroundColor: Colors.amberAccent,
+          backgroundColor: appColor,
+          child: Stack(
+            fit: StackFit.expand,
+            children: <Widget>[
+              Icon(Icons.shopping_cart),
+              Positioned(
+                right: 8,
+                top: 10,
+                child: CircleAvatar(
+                  child: Text("5"),
+                  backgroundColor: Colors.red,
+                  radius: 10.4,
+                ),
+              )
+
+            ],
+          ),
         ),
         bottomNavigationBar: BottomAppBar(
           shape: CircularNotchedRectangle(),
