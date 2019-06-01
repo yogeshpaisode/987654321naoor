@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'package:stack/constants/constants.dart';
-
 class ProductThumb extends StatelessWidget {
+  final String imageUrl;
+  final String imageTitle;
+
+  ProductThumb({
+    this.imageTitle,
+    this.imageUrl
+});
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -40,7 +45,7 @@ class ProductThumb extends StatelessWidget {
                       children: <Widget>[
                         Column(
                           children: <Widget>[
-                            Text("Tomato", style: TextStyle(color: Colors.white, fontSize: 20),),
+                            Text(this.imageTitle, style: TextStyle(color: Colors.white, fontSize: 20),),
                           ],
                         )
                       ],
@@ -62,7 +67,7 @@ class ProductThumb extends StatelessWidget {
                     child: ClipRRect(
                       borderRadius: BorderRadius.circular(220.0),
                       child: FadeInImage(
-                        image: NetworkImage(tomatoImage),
+                        image: NetworkImage(this.imageUrl),
                         fit: BoxFit.cover,
                         placeholder: AssetImage(
                             'assets/loading.gif'),

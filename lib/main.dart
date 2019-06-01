@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stack/ProductThumbs.dart';
+import 'package:stack/constants/constants.dart';
 
 void main() => runApp(MyApp());
 
@@ -69,20 +70,13 @@ class _HomeScreen extends StatelessWidget {
       body: ListView(
         physics: BouncingScrollPhysics(),
         children: <Widget>[
-          ProductThumb(),
-          ProductThumb(),
-          ProductThumb(),
-          ProductThumb(),
-          ProductThumb(),
-          ProductThumb(),
-          ProductThumb(),
-          ProductThumb(),
-          ProductThumb(),
-          ProductThumb(),
-          ProductThumb(),
-          ProductThumb(),
-          ProductThumb(),
-          ProductThumb()
+          ProductThumb(imageTitle: "Tomato", imageUrl: tomatoImage),
+          ProductThumb(imageTitle: "Spinach", imageUrl: spinach),
+          ProductThumb(imageTitle: "Lady Finger", imageUrl: ladyFinger),
+          ProductThumb(imageTitle: "Onion", imageUrl: onion),
+          ProductThumb(imageTitle: "Flower", imageUrl: flower),
+          ProductThumb(imageTitle: "Cabbage", imageUrl: cabbage),
+          ProductThumb(imageTitle: "Capsicum", imageUrl: capsicum),
         ],
       ),
     );
