@@ -25,21 +25,34 @@ class ProductThumb extends StatelessWidget {
               ],
             ),
             child: Padding(
-              padding: const EdgeInsets.only(left: 70.0),
-              child: Row(
+              padding: const EdgeInsets.only(left: 2.0, right: 2.0, top: 2.0),
+              child: Column(
                 children: <Widget>[
-                  Column(
-                    children: <Widget>[
-                      Text("Tomato", style: TextStyle(color: Colors.white, fontSize: 20),)
-                    ],
-                  )
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(3.0),
+                    child: true ? LinearProgressIndicator(
+                      backgroundColor: Colors.redAccent,
+                    ) : null,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 70.0),
+                    child: Row(
+                      children: <Widget>[
+                        Column(
+                          children: <Widget>[
+                            Text("Tomato", style: TextStyle(color: Colors.white, fontSize: 20),),
+                          ],
+                        )
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
           ),
 
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.only(top: 12.0),
             child: SizedBox(
               width: 100,
               height: 100,
